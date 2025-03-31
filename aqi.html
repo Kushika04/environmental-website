@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        align-items: center;
+      }
+      .btn {
+        color: #ffffff;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10px 20px;
+        font-size: 12px;
+        text-decoration: none;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .btn:hover {
+        border: none;
+        background: rgba(0, 0, 0, 0.4);
+        background: #8cc640;
+        padding: 20px 20px #000;
+        color: #1b1b1b;
+      }
+
+      .header {
+        padding-top: 40px;
+        padding-left: 550px;
+        padding-right: 50px;
+        padding-bottom: 70px;
+      }
+
+      .image1 {
+        position: relative;
+        text-align: center;
+        color: white;
+        
+      }
+      .introduction {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: bold;
+        font-size: 80px;
+        color: white;
+        font-family: "Times New Roman", Times, serif;
+      }
+      .int1 {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: bold;
+        font-size: 50px;
+        color: white;
+        font-family: "Times New Roman", Times, serif;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 300px;
+        margin-top:50px;
+
+
+      }
+      .grid-container img {
+        height: 500px;
+        width: 700px;
+        align-items: center;
+        padding-left: 100px;
+
+      }
+      h3{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 30px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+      }
+      .gauge {
+        display: inline-block;
+      }
+
+      .gauge > div[role="meter"] {
+        border-radius: 8rem 8rem 0 0;
+        border: 1px solid black;
+        width: 16rem;
+        height: 8rem;
+        background-color: black;
+        position: relative;
+        overflow: hidden;
+        background: conic-gradient(
+          from 0deg at 50% 100%,
+          red 30deg,
+          #8f3f97 30deg 60deg,
+          #7e0023 60deg 91deg,
+          transparent 91deg 269deg,
+          #00e400 269deg 300deg,
+          #ffff00 300deg 330deg,
+          #ff7e00 330deg 360deg
+        );
+      }
+
+      .gauge > label {
+        font-size: 14px;
+        text-align: center;
+        background-color: black;
+        padding: 0.2rem 0;
+        display: block;
+      }
+
+      .dial {
+        background-color: #00ff00;
+        transition: background-color 1s, color 0.25s;
+        border-radius: 10rem 10rem 0 0;
+        width: 70%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        left: 15%;
+        z-index: 2;
+        overflow: hidden;
+        box-shadow: 0px 0px 0px 1rem #000;
+        border-bottom: none;
+        box-sizing: border-box;
+        color: #000;
+      }
+
+      .dial.white {
+        color: #fff;
+      }
+
+      .dial > span {
+        text-align: center;
+        font-family: sans-serif;
+      }
+
+      .dial > .arrow {
+        position: absolute;
+        left: calc(50% - 0.25rem);
+        bottom: 0;
+        width: 0.5rem;
+        height: calc(100% + 1px);
+        background-color: transparent;
+        transform-origin: bottom center;
+        transform: rotate(-90deg);
+        transition: transform 1s;
+      }
+
+      .dial > .arrow:after {
+        content: "";
+        border-left: 0.5rem solid transparent;
+        border-right: 0.5rem solid transparent;
+        border-top: 0.5rem solid #000;
+        position: absolute;
+        left: calc(50% - 0.5rem);
+        top: 0;
+        width: 0;
+        height: 0;
+        transition: border-color 0.25s;
+      }
+
+      .dial.white > .arrow:after {
+        border-top-color: #fff;
+      }
+
+      .aqi-num {
+        font-weight: bold;
+        font-size: 120%;
+        margin-top: 1.25rem;
+      }
+
+      @media (forced-colors: active) {
+        .dial {
+          border: 2px solid black;
+          border-bottom: none;
+        }
+
+        .gauge > div[role="meter"] {
+          border-width: 2px;
+          border-bottom: none;
+        }
+
+        .gauge > label {
+          border: 2px solid black;
+        }
+      }
+      .footer{
+  margin-top: 30px;
+  width:100%;
+  padding: 100px 15%;
+  background: #5b5c46;
+  color:#efefef;
+  display:flex;
+  
+  
+}
+.footer div{
+  text-align: center;
+}
+.col-2{
+  flex-grow: 2;
+}
+.footer div h3{
+  font-weight: 300;
+  padding-bottom: 30px;
+  letter-spacing: 1px;
+}
+.col-1 a{
+  display:block;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color:#efefef
+}
+.col-3 p{
+  color:#efefef;
+}
+form input{
+  width:400px;
+  height:45px;
+  border-radius: 4px;
+  text-align: center;
+  margin-top:20px;
+  margin-bottom: 40px;
+  outline:none;
+  border:none;
+}
+form button{
+  background: transparent;
+  border:2px solid #fff;
+  border-radius: 30px;
+  padding: 10px 30px;
+}
+.social-icons{
+  margin-top: 30px;
+}
+.social-icons i{
+  font-size: 22px;
+  margin: 10px;
+  cursor: pointer;
+}
+.contact h3{
+color:black;
+text-align: center;
+font-size: 30px;
+padding-top: 30px;
+padding-bottom: 10px;
+}
+.left_side{
+  animation:slideleft 1s linear forwards; 
+}
+@keyframes slideleft{
+  0%{
+    transform:translate(100px);
+    opacity:0;
+  }
+  100%{
+    transform:translate(0px);
+    opacity:1;
+  }
+}
+    </style>
+    <div class="header">
+      <a href="che.html" class="btn">Home</a>
+      <a href="gallery.html" class="btn">Gallery</a>
+      <a href="che.html" class="btn">Location</a>
+      <a href="sign.html" class="btn">SignIn</a>
+    </div>
+    <div class="left_side">
+    <div class="image1">
+      <img src="field.jpg" alt="this is an image" />
+      <div class="introduction">AQI</div>
+      <div class="int1">Air Quality Index</div>
+    </div>
+    </div>
+    <div class="grid-container">
+      <div class="grid-child image">
+        <img src="AQI)Chart_US.png" alt="this is an image" />
+      </div>
+
+      <div class="grid-child check">
+        <h3>AQI Index</h3>
+        <div style="margin-bottom: 2rem">
+          <label for="set-aqi">Set AQI:</label
+          ><input type="range" id="set-aqi" min="0" max="500" value="10" />
+        </div>
+        <div class="gauge">
+          <div
+            role="meter"
+            aria-valuemin="0"
+            aria-valuemax="500"
+            aria-labelledby="meter-label"
+          >
+            <div class="dial">
+              <span class="aqi-num"></span><span>AQI</span>
+              <div class="arrow"></div>
+            </div>
+          </div>
+          <label class="label" id="meter-label"
+            >10 Minute Average US EPA PM2.5 AQI</label
+          >
+        </div>
+        <script>
+          function setDial(aqi) {
+            let angle = getAQIDialAngle(aqi);
+            let [bg, white] = getAQIColor(aqi);
+
+            let meter = document.querySelector(".gauge > div[role=meter]");
+            let dial = meter.querySelector(".dial");
+            meter.setAttribute("aria-valuenow", aqi);
+            meter.setAttribute("aria-valuetext", aqi);
+            dial.querySelector(".aqi-num").textContent = aqi;
+            dial.querySelector(".arrow").style.transform = `rotate(${
+              angle - 90
+            }deg)`;
+            dial.style.backgroundColor = bg;
+            dial.classList.toggle("white", white);
+          }
+
+          function getAQIDialAngle(aqi) {
+            if (aqi >= 301) {
+              return Math.min(((aqi - 301) / 200) * 30 + 150, 180);
+            } else if (aqi >= 201) {
+              return ((aqi - 201) / 100) * 30 + 120;
+            } else if (aqi >= 151) {
+              return ((aqi - 151) / 50) * 30 + 90;
+            } else if (aqi >= 101) {
+              return ((aqi - 101) / 50) * 30 + 60;
+            } else if (aqi >= 51) {
+              return ((aqi - 51) / 50) * 30 + 30;
+            } else if (aqi >= 0) {
+              return (aqi / 50) * 30;
+            } else {
+              return 0;
+            }
+          }
+
+          function getAQIColor(aqi) {
+            function combineColors(c1, c2, bias) {
+              return c1.map((c, i) => c * (1 - bias) + c2[i] * bias);
+            }
+
+            function stringifyColor(c) {
+              return `rgb(${c})`;
+            }
+
+            function calculateColors(c1, c2, bias) {
+              let bg = combineColors(c1, c2, bias);
+              let white =
+                (bg[0] * 299 + bg[1] * 587 + bg[2] * 114) / 1000 < 128;
+              return [stringifyColor(bg), white];
+            }
+
+            const aqiColorMap = [
+              [0, [0, 255, 0]],
+              [50, [255, 255, 0]],
+              [100, [255, 126, 0]],
+              [150, [255, 0, 0]],
+              [200, [143, 63, 151]],
+              [300, [126, 0, 35]],
+            ];
+
+            for (let i in aqiColorMap) {
+              let [target, color] = aqiColorMap[i];
+              if (target > aqi) {
+                if (i == 0) {
+                  return calculateColors(color, color, 1);
+                }
+
+                let [prevTarget, prevColor] = aqiColorMap[i - 1];
+                return calculateColors(
+                  prevColor,
+                  color,
+                  (aqi - prevTarget) / (target - prevTarget)
+                );
+              }
+            }
+
+            let [, color] = aqiColorMap[aqiColorMap.length - 1];
+            return calculateColors(color, color, 1);
+          }
+
+          let range = document.getElementById("set-aqi");
+          setDial(range.value);
+
+          range.addEventListener("change", (evt) => {
+            setDial(evt.target.value);
+          });
+        </script>
+      </div>
+    </div>
+    <div class="footer">
+        <div class="col-1">
+            <h3>USEFUL LINKS</h3>
+            <a href="che.html">Home</a>
+            <a href="signup.html">AQI</a>
+            <a href="#section2">Gallery</a>
+            <a href="sign.html">SignUp</a>
+        </div>
+        <div class="col-2">
+            <h3>QUERIES</h3>
+            <form>
+            <input type="email" placeholder="Your Email Address" required>
+            <br>
+            <button type="submit">SUBSCRIBE NOW</button>
+            </form>
+        </div>
+        <div class="col-3">
+            <h3>ADDRESS</h3>
+            <p>NH-44 HWY <br>Punjab,IN</p>
+            <div class="social-icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-snapchat"></i>
+      
+            </div>
+        </div>
+      
+      </div>
+      
+  </body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <script src="https://kit.fontawesome.com/c807fb64f9.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    font-family:serif;
+    box-sizing: border-box;
+}
+ul{
+    float:right;
+    list-style-type: none;
+    margin-top: 50px;
+    }
+    ul li{
+    justify-content: space-between;
+    display:inline-block;
+
+    }
+    ul li a:hover{
+    color:rgb(239, 239, 191);
+    text-decoration: underline;
+    }
+    header ul li a{
+    font-size: 25px;
+    text-decoration: wavy;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:rgb(0, 0, 0);
+    padding: 20px 0px;
+    border:1px solid transparent;
+    transition:0.6s ease;
+    padding-right: 100px;
+    }
+    h1{
+        padding-top:40px;
+        padding-left:150px;
+        font-family:'Times New Roman', Times, serif;
+        color:rgb(0, 0, 0);
+        font-size: 30px;
+    }
+    .h h2{
+      padding-left: 200px;
+      color:#000000;
+
+    }
+    .grid-work{
+        background-color:#f2f7e9;
+        padding-top: 50px;
+        margin-top: 40px;
+    }
+    .con1 h3{
+        text-align: center;
+        font-size: 40px;
+        font-family:monospace,serif;
+        padding-top: 30px;
+    }
+    .con1 p{
+        text-align: center;
+        font-size: 20px;
+        padding-top:20px;
+    }
+    .container{
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-row-gap:30px;
+        grid-column-gap: 20px;
+        padding-left: 110px;
+        padding-top: 200px;
+        padding-bottom: 150px;
+    }
+    img{
+        height:200px;
+        width:300px;
+        transition: 1s ease;
+    }
+    img:hover{
+        -webkit-filter:blur(5px);
+        transition: 1s ease;
+    }
+    .load a{
+        align-items: center;
+        font-family: monospace,serif;
+        padding-top: 90px;
+        font-size: 20px;
+    }
+    .footer{
+        margin-top: 50px;
+        width:100%;
+        padding: 100px 15%;
+        background-color: #f7ede0;
+        color:#000000;
+        display:flex;
+    }
+    .footer div{
+        text-align: center;
+    }
+    .col-2{
+        flex-grow: 2;
+    }
+    .footer div h3{
+        font-weight: 300;
+        padding-bottom: 30px;
+        letter-spacing: 1px;
+    }
+    .col-1 a{
+        display:block;
+        text-decoration: none;
+        margin-bottom: 10px;
+        color:#000000
+    }
+    .col-3 p{
+        color:#000000;
+    }
+    form input{
+        width:400px;
+        height:45px;
+        border-radius: 4px;
+        text-align: center;
+        margin-top:20px;
+        margin-bottom: 40px;
+        outline:none;
+        border:none;
+    }
+    form button{
+        background: transparent;
+        border:2px solid rgb(0, 0, 0);
+        border-radius: 30px;
+        padding: 10px 30px;
+    }
+    .social-icons{
+        margin-top: 30px;
+    }
+    .social-icons i{
+        font-size: 22px;
+        margin: 10px;
+        cursor: pointer;
+    }
+    .contact h3{
+      color:black;
+      text-align: center;
+      font-size: 30px;
+      padding-top: 30px;
+      padding-bottom: 10px;
+    }
+    i:hover{
+        opacity: 1;
+        transition: 1s ease;
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+        <li><a href="che.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="che.html">About</a></li>
+        <li><a href="che.html">Location </a></li>
+        </ul>
+    </header>
+    <section>
+      <h1>AIR <br></h1>
+      <div class="h">
+        <h2> POLLUTION</h2></div>
+  </section>
+  <section class="grid-work">
+    <div class="con1">
+        <h3>Air Pollution And Awareness</h3>
+        <p>Air pollution is contamination of the indoor or outdoor environment by any chemical, <br>
+          physical or biological agent that modifies the natural characteristics of the atmosphere..</p>
+    </div>
+    <div class="container">
+        <div class="item"><img src="1.jpg"></div>
+        <div class="item"><img src="2.jpg"></div>
+        <div class="item"><img src="3.jpg"></div>
+        <div class="item"><img src="4.jpg"></div>
+        <div class="item"><img src="c.jpg"></div>
+        <div class="item"><img src="above.jpeg"></div>
+        <div class="item"><img src="tree.jpg"></div>
+        <div class="item"><img src="ci.jpg"></div>
+        <div class="item"><img src="co.jpg"></div>
+        <div class="item"><img src="cow.jpg"></div>
+        <div class="item"><img src="pexels-vlad-chețan-3387159.jpg"></div>
+        <div class="item"><img src="re.jpg"></div>
+        <div class="item"><img src="bu.jpg"></div>
+        <div class="item"><img src="air.jpg"></div>
+        <div class="item"><img src="aqqi.jpg"></div>
+    </div>
+
+  </section>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="load">
+    <center><a href="#">LOAD MORE</a></center>
+  </div>
+  <div class="footer">
+    <div class="col-1">
+        <h3>USEFUL LINKS</h3>
+        <a href="che.html">Login</a>
+        <a href="sign.html">Signup</a>
+        <a href="che.html">Location</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="che.html">Contact</a>
+    </div>
+    <div class="col-2">
+        <h3>QUERIES</h3>
+        <form>
+        <input type="email" placeholder="Your Email Address" required>
+        <br>
+        <button type="submit">SUBSCRIBE NOW</button>
+        </form>
+    </div>
+    <div class="col-3">
+        <h3>ADDRESS</h3>
+        <p>NH-44 HWY <br>Punjab,IN</p>
+        <div class="social-icons">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-snapchat"></i>
+  
+        </div>
+    </div>
+  
+  </div>
+
+</body>
+</html>

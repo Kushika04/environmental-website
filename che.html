@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Air pollution Awareness</title>
+  <link rel="stylesheet" href="che.css" />
+  <script src="https://kit.fontawesome.com/c807fb64f9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="header">
+    <a href="che.html" class="btn">Home</a>
+    <a href="gallery.html" class="btn">Gallery</a>
+    <a href="#section1" class="btn">Location</a>
+    <a href="sign.html" class="btn">SignIn</a>
+    <h1 class="slide_left">
+      <center><b>WHAT WOULD NATURE DO?</b></center>
+    </h1>
+    <h2 class="slide_left">
+      <center>Green. That's how we'd like<br />the world to be.</center>
+    </h2>
+  </div>
+  <div class="aqi">
+    <button type="button"><a href="aqi.html">AQI INDEX</a></button>
+  </div>
+  <div class="cent">
+    <img src="image.jpg" />
+  </div>
+  <div class="container">
+    <div class="grow">
+      <div class="energy">
+        <button type="button">
+          <p1>Energy Saving</p1><br /><br />
+          <p2>Choose efficient appliances and heating systems. Get an energy
+            audit and follow the advice. Turn off electrical stuff you are not
+            using. It all adds up.</p2>
+        </button>
+      </div>
+    </div>
+    <div class="grow">
+      <div class="garbage">
+        <button type="button">
+          <p1>Don't Burn the garbage</p1><br /><br />
+          <p2>
+            >Burning your household garbage is dangerous to your health and our
+            environment, and generally against the law in Minnesota.<br />
+            If you're still using a burn barrel, wood stove, or fire-pit for
+            your trash, contact your county about arranging for trash hauling
+            services.</p2>
+        </button>
+      </div>
+    </div>
+    <div class="grow">
+      <div class="smoke">
+        <button type="button">
+          <p1>Reduction of forest fires and smoking</p1><br /><br />
+          <p2>The collecting of garbage and getting it on fire in dry seasons or
+            dry leaves catching fires is a<br />
+            huge factor for causing air pollution, moreover smoking also causes
+            air pollution and causes the air quality to worsen along with
+            obviously damaging one's health.</p2>
+        </button>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="cont2">
+    <div class="fade-in">
+      <div class="b1">
+        <img src="plant.gif" alt="This is an image of growing plant" />
+      </div>
+    </div>
+    <div class="fade-in">
+      <div class="b2">
+        <h2>Away From Pollution, Towards Solution.</h2>
+        <br />
+        <p1>Creating policies and passing laws to restrict air pollution has been
+          an important step toward improving air quality.</p1><br /><br />
+        <canvas id="myChart" style="width: 100%; max-width: 600px"></canvas>
+
+        <script>
+          var xValues = [
+            "Dust and construction",
+            "Waste Burning",
+            "Transport",
+            "Diesel Generator",
+            "Industries",
+            "Domestic Cooking",
+          ];
+          var yValues = [45, 17, 14, 9, 8, 7];
+          var barColors = [
+            "#b91d47",
+            "#00aba9",
+            "#2b5797",
+            "#e8c3b9",
+            "#1e7145",
+            "#A1D988",
+          ];
+
+          new Chart("myChart", {
+            type: "pie",
+            data: {
+              labels: xValues,
+              datasets: [
+                {
+                  backgroundColor: barColors,
+                  data: yValues,
+                },
+              ],
+            },
+            options: {
+              title: {
+                display: true,
+                text: "Sources of Air Pollution",
+              },
+            },
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+  <div class="intro2">
+    <h2>
+      <center>Join the race to make the world a better place.</center>
+    </h2>
+  </div>
+  <div class="cont3">
+    <div class="card">
+      <img src="bu.jpg" alt="this is an image" />
+      <div class="intro1">
+        <h1>Save Energy</h1>
+        <p>
+          <span>Spare a watt, save a lot.</span>Turn off the lights before you
+          perish. Unite and save the earth.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="nature-gac0def6ed_1920.jpg" alt="this is an image" />
+      <div class="intro1">
+        <h1>Save Trees</h1>
+        <p>
+          <span>Hear the Trees Falling?</span>Cut a Tree, Cut a Tree and
+          there'll be no more left to see. Take care of trees.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="pexels-vlad-chețan-3387159.jpg" alt="this is an image" />
+      <div class="intro1">
+        <h1>Reduce Pollution</h1>
+        <p>
+          <span>Pollution is not a solution.</span>Protect our earth today for
+          our children's tomorrow.
+        </p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="cont4">
+    <div class="box1" id="section1">
+      <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+        <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
+        <script>(function () {
+            var setting = { "height": 540, "width": 750, "zoom": 15, "queryString": "Lovely Professional University, Grand Trunk Road, Phagwara, Punjab, India", "place_id": "ChIJ85xInF5fGjkRAMNTnUClSUA", "satellite": true, "centerCoord": [31.25839252208835, 75.70608055], "cid": "0x4049a5409d53c300", "lang": "en", "cityUrl": "/india/jalandhar-18909", "cityAnchorText": "Map of Jalandhar, North Zone, India", "id": "map-9cd199b9cc5410cd3b1ad21cab2e54d3", "embed_id": "909948" };
+            var d = document;
+            var s = d.createElement('script');
+            s.src = 'https://1map.com/js/script-for-user.js?embed_id=909948';
+            s.async = true;
+            s.onload = function (e) {
+              window.OneMap.initMap(setting)
+            };
+            var to = d.getElementsByTagName('script')[0];
+            to.parentNode.insertBefore(s, to);
+          })();</script><a href="https://1map.com/map-embed">1 Map</a>
+      </div>
+    </div>
+    <div class="box2">
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form>
+          <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+            <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+              <i class="fab fa-facebook-f"></i>
+            </button>
+
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+              <i class="fab fa-twitter"></i>
+            </button>
+
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+              <i class="fab fa-linkedin-in"></i>
+            </button>
+          </div>
+
+          <div class="divider d-flex align-items-center my-4">
+            <p class="text-center fw-bold mx-3 mb-0">Or</p>
+          </div>
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input type="email" id="form3Example3" class="form-control form-control-lg"
+              placeholder="Enter a valid email address" />
+            <label class="form-label" for="form3Example3"></label>
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+            <input type="password" id="form3Example4" class="form-control form-control-lg"
+              placeholder="Enter password" />
+            <label class="form-label" for="form3Example4"></label>
+          </div>
+
+          <div class="justify">
+            <a href="#!" class="text-body">Forgot password?</a>
+          </div>
+          <br>
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="button" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button><br><br>
+            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="sign.html"
+                class="link-danger">SignUp</a></p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+  <br>
+  <br>
+  <div class="footer">
+    <div class="col-1">
+      <h3>USEFUL LINKS</h3>
+      <a href="che.html">Home</a>
+      <a href="aqi.html">AQI</a>
+      <a href="#section2">Gallery</a>
+      <a href="sign.html">SignUp</a>
+    </div>
+    <div class="col-2">
+      <h3>QUERIES</h3>
+      <form>
+        <input type="email" placeholder="Your Email Address" required>
+        <br>
+        <button type="submit">SUBSCRIBE NOW</button>
+      </form>
+    </div>
+    <div class="col-3">
+      <h3>ADDRESS</h3>
+      <p>NH-44 HWY <br>Punjab,IN</p>
+      <div class="social-icons">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-snapchat"></i>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
